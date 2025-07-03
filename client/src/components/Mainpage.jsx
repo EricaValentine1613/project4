@@ -5,16 +5,16 @@ import Registrationpage from './components/Registrationpage'
 
 
 export default function Mainpage() {
-  const [login, setLogin] = useState([{id_username: "", email:"", password: ""}])
+  const [data, setData] = useState([{questions: "", answers:"",}])
 
-  const fetchStudents = async () => {
+  const fetchData = async () => {
     const response = await axios.get ("http://localhost:4000/students/")
     console.log (response.data)
-    setLogin (response.data) 
+    setMaindata (response.data) 
   }
 
   useEffect(() => {
-    fetchLogin();
+    fetchData();
   }, [])
 
 
