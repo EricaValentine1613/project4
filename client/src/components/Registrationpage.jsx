@@ -3,15 +3,14 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
 import { v4 as uuidv4 } from 'uuid';
-import './registrationpage.jsx';
-import './header.jsx'
+import '../Registrationpage.jsx';
+import './Header.jsx'
 
-export default function registrationpage({add, setAddition}) {
+export default function Registrationpage({add, setAddition}) {
   const [formData, setFormData] = useState({
-    id: "",
-    title: "",
-    author: "",
-    status:""
+    username: "",
+    email: "",
+    addition: "",
   })
 
   function handleChange (event) {
